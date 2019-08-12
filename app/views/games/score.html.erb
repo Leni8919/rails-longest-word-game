@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h1>Your result</h1>
+
+  <h2>Your grid was :</h2>
+  <ul id = "wrapper" class="list-inline align-middle">
+  <% @letters.each do |letter| %>
+    <li class="list-inline-item text-center"><%= letter %></li>
+    <% end %>
+  </ul>
+  <h2>Result : </h2>
+  <p><%= @result %></p>
+  <%= link_to 'Start a new game', '/new' %>
+</div>
+
+
