@@ -7,9 +7,15 @@
     <li class="list-inline-item text-center"><%= letter %></li>
     <% end %>
   </ul>
+
+  <h2>Your guess was :</h2>
+  <p><%=  @guess %> </p>
+
   <h2>Result : </h2>
   <p><%= @result %></p>
   <%= link_to 'Start a new game', '/new' %>
+
+  <p><%= @results %></p>
 </div>
 
 
