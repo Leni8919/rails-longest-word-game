@@ -11,10 +11,10 @@ class GamesController < ApplicationController
     @letters = params[:letters].split(' ')
     if !check_guess(@guess, @letters)
       @result = 'You suck! You are using letters that are not in your grid.'
-      points = 0
+      # points = 0
     elsif check_api(@guess) == false
       @result = 'You suck! You word is not an English word.'
-      points = 0
+      # points = 0
     else
       time = params[:time]
       points = (@guess.length * 1000) - (Time.now - Time.parse(time)) * 10
@@ -39,3 +39,5 @@ class GamesController < ApplicationController
     guess.upcase.split('').sort.all? { |letter| guess.count(letter) <= letters.count(letter) }
   end
 end
+
+
